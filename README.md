@@ -32,7 +32,7 @@ A simple Grid for React based [react-virtualized](https://bvaughn.github.io/reac
 customColumns: [
   {
     dataKey: 'nome_cli',
-    label: 'Nome do Cliente',
+    label: 'Client name',
     type: 'string'
   }
 ]
@@ -66,8 +66,8 @@ data: [
 ```js
 customColumns: [
   {
-    dataKey: 'hora_ligacao',
-    label: 'Hora da ligação',
+    dataKey: 'call_time',
+    label: 'Call Time',
     type: 'datetime',
     dateType: 'iso',
     renderGraph: false,
@@ -75,7 +75,7 @@ customColumns: [
   },
   {
     dataKey: 'gender',
-    label: 'Gênero',
+    label: 'Gender',
     width: 150,
     //render exemple
     render: ({ row, KEY }) => <div>
@@ -83,12 +83,12 @@ customColumns: [
     </div>
   },
   {
-    dataKey: 'periodo',
-    label: 'Período',
+    dataKey: 'cycle',
+    label: 'Cycle',
     //inputFilterSelect example
     inputFilterSelect: [
-      { value: 'Tarde', label: 'Tarde label' },
-      { value: 'Manhã', label: 'Manhã label' },
+      { value: 'night', label: 'night label' },
+      { value: 'morning', label: 'Morning label' },
     ],
     renderGraph: true,
     width: 180,
@@ -117,7 +117,7 @@ import VirtualizedMaterialTable from "virtualized-material-graph-table";
 class GraphTable extends Component {
   render() {
     return (
-      <div style={{ height: 800 }}>
+      <div style={{ height: 400 }}>
         <VirtualizedMaterialTable
           customColumns={[
              {
