@@ -329,84 +329,78 @@ class Relatorio extends Component {
       <div style={{ height: '100%', position: 'relative' }}>
         <ScrollSync>
           {({ onScroll, scrollLeft }) => (
-            <div style={{ position: 'relative', height: '100%' }}>
-              <AutoSizer>
-                {({ width, height }) => (
-                  <>
-                    <div
-                      style={{
-                        width,
-                        display: 'flex',
-                        boxSizing: 'border-box',
-                        marginBottom: 10,
-                      }}
+            <AutoSizer>
+              {({ width, height }) => (
+                <>
+                  <div
+                    style={{
+                      width,
+                      display: 'flex',
+                      boxSizing: 'border-box',
+                      marginBottom: 10,
+                    }}
+                  >
+                    {renderGraphBtn == false || renderGraphBtn == 'false' ? (
+                      <></>
+                    ) : (
+                      <Graph
+                        filterDataClickEvent={filterDataClickEvent}
+                        filterData={filterData}
+                        inputRefs={inputRefs}
+                        data={data}
+                        customColumns={customColumns}
+                      />
+                    )}
+
+                    <Button
+                      variant="outlined"
+                      color="primary"
+                      size="small"
+                      onClick={this.clearInputs}
                     >
-                      {renderGraphBtn == false || renderGraphBtn == 'false' ? (
-                        <></>
-                      ) : (
-                        <Graph
-                          filterDataClickEvent={filterDataClickEvent}
-                          filterData={filterData}
-                          inputRefs={inputRefs}
-                          data={data}
-                          customColumns={customColumns}
-                        />
-                      )}
+                      <CleanIcon />
+                      Limpar filtro
+                    </Button>
+                  </div>
 
-                      <Button
-                        variant="outlined"
-                        color="primary"
-                        size="small"
-                        onClick={this.clearInputs}
-                      >
-                        <CleanIcon />
-                        Limpar filtro
-                      </Button>
-                    </div>
+                  <Grid
+                    style={{
+                      overflow: 'hidden',
+                      outline: 'none',
+                      borderBottom: '1px solid #eee',
+                      marginBottom: 10,
+                    }}
+                    data={customColumns}
+                    cellRenderer={this._cellHeaderRenderer}
+                    columnWidth={this.getColumnWidth}
+                    columnCount={customColumns.length}
+                    fixedRowCount={1}
+                    height={75}
+                    rowHeight={75}
+                    rowCount={1}
+                    width={width}
+                    scrollLeft={scrollLeft}
+                    overscanColumnCount={customColumns.length}
+                  />
 
-                    <Grid
-                      style={{
-                        overflow: 'hidden !important',
-                        outline: 'none',
-                        borderBottom: '1px solid #eee',
-                        marginBottom: 10,
-                      }}
-                      data={customColumns}
-                      cellRenderer={this._cellHeaderRenderer}
-                      columnWidth={this.getColumnWidth}
-                      columnCount={customColumns.length}
-                      fixedRowCount={1}
-                      height={75}
-                      rowHeight={75}
-                      rowCount={1}
-                      width={width}
-                      scrollLeft={scrollLeft}
-                      overscanColumnCount={customColumns.length}
-                    />
-
-                    <Grid
-                      style={{ outline: 'none' }}
-                      data={data}
-                      cellRenderer={
-                        data.length > 0
-                          ? this._cellRenderer
-                          : this.noDataRenderer
-                      }
-                      columnWidth={
-                        data.length > 0 ? this.getColumnWidth : width
-                      }
-                      columnCount={data.length > 0 ? customColumns.length : 1}
-                      deferredMeasurementCache={this.cache}
-                      height={height - 160}
-                      rowHeight={this.cache.rowHeight}
-                      rowCount={data.length > 0 ? data.length : 1}
-                      width={width}
-                      onScroll={onScroll}
-                    />
-                  </>
-                )}
-              </AutoSizer>
-            </div>
+                  <Grid
+                    style={{ outline: 'none' }}
+                    data={data}
+                    cellRenderer={
+                      data.length > 0 ? this._cellRenderer : this.noDataRenderer
+                    }
+                    columnWidth={data.length > 0 ? this.getColumnWidth : width}
+                    columnCount={data.length > 0 ? customColumns.length : 1}
+                    deferredMeasurementCache={this.cache}
+                    height={height - 160}
+                    rowHeight={this.cache.rowHeight}
+                    rowCount={data.length > 0 ? data.length : 1}
+                    width={width}
+                    onScroll={onScroll}
+                  />
+                </>
+              )}
+            </AutoSizer>
           )}
         </ScrollSync>
       </div>
