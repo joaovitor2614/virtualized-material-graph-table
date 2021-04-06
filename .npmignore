@@ -1,0 +1,14 @@
+.idea
+src
+.babelrc
+webpack.config.js
+consolidado.json
+.gitignore
+package-lock.json
+.git
+public
+node_modules
+prettier.config
+package-lock
+.eslintrc
+.editorconfig
