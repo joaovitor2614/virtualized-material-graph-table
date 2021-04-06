@@ -107,7 +107,7 @@ npm install virtualized-material-graph-table --save
 
 ## Usage
 
-Here is a basic example of using material-table within a react application.
+Basic example.
 
 ```jsx
 import React, { Component } from "react";
