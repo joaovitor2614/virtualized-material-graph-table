@@ -12,7 +12,7 @@ A simple Grid for React based [react-virtualized](https://bvaughn.github.io/reac
 
 
 ## Demo
-[functional table demo](https://andre166.github.io/virtualized-material-graph-table/)
+[Table demo](https://andre166.github.io/virtualized-material-graph-table/)
 
 
 ### Props
@@ -46,7 +46,7 @@ data: [
   }
 ]
 
-<ShowRelatorio customColumns={customColumns} data={data} rowHeight={50}/>
+<virtualizedMaterialGraphTable customColumns={customColumns} data={data} rowHeight={50}/>
 ```
 ### customColumns Props
 
@@ -104,7 +104,6 @@ customColumns: [
 #### 1.Install package
 
 npm install virtualized-material-graph-table --save
-npm i @material-ui/icons
 
 ## Usage
 
@@ -114,8 +113,6 @@ Here is a basic example of using material-table within a react application.
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import VirtualizedMaterialTable from "virtualized-material-graph-table";
-import WbSunnyIcon from '@material-ui/icons/WbSunny'
-import Brightness2Icon from '@material-ui/icons/Brightness2'
 
 class GraphTable extends Component {
   render() {
@@ -156,49 +153,7 @@ class GraphTable extends Component {
               label: 'Cycle',
               dataKey: 'periodo',
               width: 200,
-              render: ({ row, KEY }) => {
-                return (
-                  <div>
-                    {row[KEY] == 'Manhã' ? (
-                      <div
-                        style={{
-                          display: 'flex',
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          backgroundImage: 'linear-gradient(red, yellow)',
-                          padding: 5,
-                          borderRadius: 4,
-                          color: '#fff',
-                        }}
-                      >
-                        <WbSunnyIcon />
-                        {row[KEY]}
-                      </div>
-                    ) : (
-                      <>
-                        {row[KEY] == 'Noite' && (
-                          <div
-                            style={{
-                              display: 'flex',
-                              alignItems: 'center',
-                              justifyContent: 'center',
-                              backgroundImage: 'linear-gradient(blue, black)',
-                              color: '#fff',
-                              padding: 5,
-                              borderRadius: 4,
-                            }}
-                          >
-                            <Brightness2Icon />
-                            {row[KEY]}
-                          </div>
-                        )}
-                      </>
-                    )}
-                  </div>
-                )
-              },
             },
-
 
           ]}
           data={[
