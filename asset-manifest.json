@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/virtualized-material-graph-table/static/css/main.9bae01a7.chunk.css",
+    "main.js": "/virtualized-material-graph-table/static/js/main.685e307d.chunk.js",
+    "main.js.map": "/virtualized-material-graph-table/static/js/main.685e307d.chunk.js.map",
+    "runtime-main.js": "/virtualized-material-graph-table/static/js/runtime-main.fa91eaaa.js",
+    "runtime-main.js.map": "/virtualized-material-graph-table/static/js/runtime-main.fa91eaaa.js.map",
+    "static/js/2.d6e0c325.chunk.js": "/virtualized-material-graph-table/static/js/2.d6e0c325.chunk.js",
+    "static/js/2.d6e0c325.chunk.js.map": "/virtualized-material-graph-table/static/js/2.d6e0c325.chunk.js.map",
+    "index.html": "/virtualized-material-graph-table/index.html",
+    "precache-manifest.c7e3c59ff373d032ae58010ee2da4c95.js": "/virtualized-material-graph-table/precache-manifest.c7e3c59ff373d032ae58010ee2da4c95.js",
+    "service-worker.js": "/virtualized-material-graph-table/service-worker.js",
+    "static/css/main.9bae01a7.chunk.css.map": "/virtualized-material-graph-table/static/css/main.9bae01a7.chunk.css.map",
+    "static/js/2.d6e0c325.chunk.js.LICENSE.txt": "/virtualized-material-graph-table/static/js/2.d6e0c325.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fa91eaaa.js",
+    "static/js/2.d6e0c325.chunk.js",
+    "static/css/main.9bae01a7.chunk.css",
+    "static/js/main.685e307d.chunk.js"
+  ]
+}
