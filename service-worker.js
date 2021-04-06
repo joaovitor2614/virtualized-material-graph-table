@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/virtualized-material-graph-table/precache-manifest.c7e3c59ff373d032ae58010ee2da4c95.js"
+  "/virtualized-material-graph-table/precache-manifest.98d833f59c41b5ab969a7120e7fb8c2d.js"
 );
 
 self.addEventListener('message', (event) => {
